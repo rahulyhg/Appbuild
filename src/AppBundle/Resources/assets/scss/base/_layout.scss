@@ -24,3 +24,7 @@ body {
   padding-right: rem-calc(5);
   padding-left: rem-calc(5);
 }
+
+.section-results + .section-results {
+  margin-top: $body-padding-bottom;
+}
