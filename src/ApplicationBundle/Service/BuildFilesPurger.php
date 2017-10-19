@@ -32,8 +32,6 @@ class BuildFilesPurger
     private $unusedFilesFinderDateFilter;
 
     /**
-     * construct.
-     *
      * @param Filesystem    $filesystem
      * @param EntityManager $entityManager
      * @param string        $buildsApplicationDir

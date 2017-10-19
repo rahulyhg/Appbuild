@@ -6,10 +6,6 @@
   @include breakpoint(small only) {
     height: $table-line-height;
   }
-
-  @include breakpoint(medium down) {
-    width: 100%;
-  }
 }
 
 .app-name-wrap {
@@ -241,9 +237,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include breakpoint(small only) {
+    width: map-get($button-icon-download-mobile-size, width);
+    height: map-get($button-icon-download-mobile-size, height);
+    line-height: map-get($button-icon-download-mobile-size, height);
+
+    &:hover,
+    &:focus {
+      box-shadow: inset  (- map-get($button-icon-download-mobile-size, width)) 0 0 darken($primary-color, 5%);
+    }
+  }
 }
 
 .icon-action_download__label {
-  padding-left: rem-calc(2);
   font-size: rem-calc(12);
 }
